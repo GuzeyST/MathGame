@@ -30,8 +30,7 @@ class GameViewModel(application: Application): AndroidViewModel(application){
             }
 
             override fun onFinish() {
-                //setAnswers()
-                //startGame()
+                timeValue.value = 0.toString()
             }
         }.start()
     }

@@ -55,6 +55,7 @@ class GameActivity : AppCompatActivity() {
                 if (it.toInt() <= 3) this.setTextColor(resources.getColor(R.color.red))
                 else this.setTextColor(resources.getColor(R.color.black))
                 this.text = it
+                if (it.toInt() == 0) endGame()
             }
         })
         gameViewModel.listData.observe(this, {
@@ -78,14 +79,18 @@ class GameActivity : AppCompatActivity() {
             Toast.makeText(this, getString(R.string.right), Toast.LENGTH_SHORT).show()
             gameViewModel.startGame()
         }else{
-            saveBestScore()
-            binding.tvTack.text = getString(R.string.lose_text) + "$score"
-            for(tv in listAnswers){
-                tv?.visibility = View.INVISIBLE
-            }
-            binding.tvResumeGame.visibility = View.VISIBLE
+            endGame()
         }
         binding.tvScore.text = getString(R.string.current_score) + "$score"
+    }
+
+    private fun endGame(){
+        saveBestScore()
+        binding.tvTack.text = getString(R.string.lose_text) + "$score"
+        for(tv in listAnswers){
+            tv?.visibility = View.INVISIBLE
+        }
+        binding.tvResumeGame.visibility = View.VISIBLE
     }
 
     fun onClickResumeGame(view: View) {

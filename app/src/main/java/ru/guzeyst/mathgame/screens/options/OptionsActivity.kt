@@ -23,8 +23,8 @@ class OptionsActivity : AppCompatActivity() {
         binding.etMaxNumber.setText(ObjectOptions.maxNumber.toString())
         binding.switchNegative.isChecked = ObjectOptions.useNegative
         val rbChecked = when (ObjectOptions.difficulty) {
-            20000 -> binding.rbNormal
-            10000 -> binding.rbHard
+            10000 -> binding.rbNormal
+            5000 -> binding.rbHard
             else -> binding.rbEasy
         }
         rbChecked.isChecked = true
@@ -52,9 +52,9 @@ class OptionsActivity : AppCompatActivity() {
         editor?.let {
             val useNegative = binding.switchNegative.isChecked
             val difficulty = when (binding.radioGroup.checkedRadioButtonId) {
-                R.id.rbNormal -> 20000
-                R.id.rbHard -> 10000
-                else -> 30000
+                R.id.rbNormal -> 10000
+                R.id.rbHard -> 5000
+                else -> 15000
             }
 
             it.putBoolean(getString(R.string.key_use_negative), useNegative)

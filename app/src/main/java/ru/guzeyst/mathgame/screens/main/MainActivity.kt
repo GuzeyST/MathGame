@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val pref = getSharedPreferences(getString(R.string.key_main_options), MODE_PRIVATE)
         val maxNumber = pref.getInt(getString(R.string.key_max_number), 5)
         val useNegative = pref.getBoolean(getString(R.string.key_use_negative), false)
-        val difficulty = pref.getInt(getString(R.string.key_difficulty), 30000)
+        val difficulty = pref.getInt(getString(R.string.key_difficulty), 15000)
         val bestScore = pref.getInt(getString(R.string.key_best_score), 0)
         ObjectOptions.maxNumber = maxNumber
         ObjectOptions.useNegative = useNegative
