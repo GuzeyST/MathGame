@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MathGame</string>
+    <string name="tvStartGame">Начало игры</string>
+    <string name="tvOptions">Настройки</string>
+    <string name="tvExit">Выход</string>
+    <string name="use_negative_number">Использовать отцательные цифры</string>
+    <string name="max_number">Максимальное значение</string>
+    <string name="from">От</string>
+    <string name="before">до</string>
+    <string name="save">Сохранить</string>
+    <string name="key_main_options">MainOptions</string>
+    <string name="key_max_number">maxNumber</string>
+    <string name="key_use_negative">useNegative</string>
+    <string name="key_difficulty">difficulty</string>
+    <string name="send_error_options">Необходимо вввести максимальное допустимое число</string>
+    <string name="difficult">Сложность</string>
+    <string name="text_answer">Answer</string>
+    <string name="tvBestScore">Текйщий лучший результат</string>
+    <string name="key_best_score">bestScore</string>
+    <string name="start_score">Текущией счет: 0</string>
+    <string name="text_best_score">Лучший результат:</string>
+    <string name="right">Верно!</string>
+    <string name="current_score">Текущией счет:</string>
+    <string name="lose_text">\"Упс, вы проиграли. Ваш результат: \"</string>
+    <string name="tv">= ?</string>
+</resources>

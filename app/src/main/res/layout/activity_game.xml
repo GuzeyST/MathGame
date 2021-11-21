@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.game.GameActivity">
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:text="@string/start_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResumeGame"
+        style="@style/BottomGame"
+        android:layout_width="match_parent"
+        android:background="@color/teal_200"
+        android:text="Попробовать еще раз"
+        android:visibility="gone"
+        android:onClick="onClickResumeGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvAnswer1" />
+
+    <TextView
+        android:id="@+id/tvAnswer1"
+        style="@style/BottomGame"
+        android:layout_width="0dp"
+        android:background="@color/aqua"
+        android:contentDescription="@string/text_answer"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer3"
+        app:layout_constraintEnd_toStartOf="@id/tvAnswer2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onClickAnswer"/>
+
+    <TextView
+        android:id="@+id/tvAnswer2"
+        style="@style/BottomGame"
+        android:layout_width="0dp"
+        android:background="@color/violet"
+        android:contentDescription="@string/text_answer"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAnswer1"
+        android:onClick="onClickAnswer"/>
+
+    <TextView
+        android:id="@+id/tvAnswer3"
+        style="@style/BottomGame"
+        android:layout_width="0dp"
+        android:background="@color/lime"
+        android:contentDescription="@string/text_answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvAnswer4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onClickAnswer"/>
+
+    <TextView
+        android:id="@+id/tvAnswer4"
+        style="@style/BottomGame"
+        android:layout_width="0dp"
+        android:background="@color/tomato"
+        android:contentDescription="@string/text_answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAnswer3"
+        android:onClick="onClickAnswer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

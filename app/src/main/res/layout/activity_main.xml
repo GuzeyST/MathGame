@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/BackgroundStyle"
+    tools:context=".screens.main.MainActivity">
+
+    <TextView
+        android:id="@+id/tvStartGame"
+        style="@style/TextMenuClikable"
+        android:fontFamily="sans-serif"
+        android:onClick="onClickStartGame"
+        android:text="@string/tvStartGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvOptions"/>
+
+    <TextView
+        android:id="@+id/tvOptions"
+        style="@style/TextMenuClikable"
+        android:onClick="onClickOptions"
+        android:text="@string/tvOptions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartGame"
+        app:layout_constraintBottom_toTopOf="@+id/tvBestScore"/>
+
+    <TextView
+        android:id="@+id/tvBestScore"
+        style="@style/TextMenuOptionaly"
+        android:gravity="center"
+        android:text="@string/tvBestScore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOptions" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
